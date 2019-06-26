@@ -1,0 +1,338 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~aos/src/sass/aos";
+
+//fonts
+$font_0: Open Sans;
+
+//urls
+$url_0: url(../fonts/OpenSans-Regular.eot);
+$url_1: url(../fonts/OpenSans-Regular.eot?#iefix);
+$url_2: url(../fonts/OpenSans-Regular.woff2);
+$url_3: url(../fonts/OpenSans-Regular.woff);
+$url_4: url(../fonts/OpenSans-Regular.ttf);
+$url_5: url(../fonts/OpenSans-Regular.svg#OpenSans-Regular);
+$url_6: url(../fonts/OpenSans-Light.eot);
+$url_7: url(../fonts/OpenSans-Light.eot?#iefix);
+$url_8: url(../fonts/OpenSans-Light.woff2);
+$url_9: url(../fonts/OpenSans-Light.woff);
+$url_10: url(../fonts/OpenSans-Light.ttf);
+$url_11: url(../fonts/OpenSans-Light.svg#OpenSans-Light);
+$url_12: url(../fonts/OpenSans-SemiBold.eot);
+$url_13: url(../fonts/OpenSans-SemiBold.eot?#iefix);
+$url_14: url(../fonts/OpenSans-SemiBold.woff2);
+$url_15: url(../fonts/OpenSans-SemiBold.woff);
+$url_16: url(../fonts/OpenSans-SemiBold.ttf);
+$url_17: url(../fonts/OpenSans-SemiBold.svg#OpenSans-SemiBold);
+$url_18: url(../fonts/OpenSans-Bold.eot);
+$url_19: url(../fonts/OpenSans-Bold.eot?#iefix);
+$url_20: url(../fonts/OpenSans-Bold.woff2);
+$url_21: url(../fonts/OpenSans-Bold.woff);
+$url_22: url(../fonts/OpenSans-Bold.ttf);
+$url_23: url(../fonts/OpenSans-Bold.svg#OpenSans-Bold);
+
+@font-face {
+    font-family: $font_0;
+    src: $url_0;
+    src: $url_1 format('embedded-opentype'), $url_2 format('woff2'), $url_3 format('woff'), $url_4 format('truetype'), $url_5 format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: $font_0;
+    src: $url_6;
+    src: $url_7 format('embedded-opentype'), $url_8 format('woff2'), $url_9 format('woff'), $url_10 format('truetype'), $url_11 format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: $font_0;
+    src: $url_12;
+    src: $url_13 format('embedded-opentype'), $url_14 format('woff2'), $url_15 format('woff'), $url_16 format('truetype'), $url_17 format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: $font_0;
+    src: $url_18;
+    src: $url_19 format('embedded-opentype'), $url_20 format('woff2'), $url_21 format('woff'), $url_22 format('truetype'), $url_23 format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    color: #555559;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 300;
+    margin-top: 24px;
+    margin-bottom: 83px;
+    letter-spacing: -2px;
+}
+
+h2 {
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    letter-spacing: -1px;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 31px;
+        height: 2px;
+        top: 15px;
+        left: -50px;
+        background-color: #555559;
+    }
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+}
+
+#header-photos {
+    height: 481px;
+    background: (left / contain) repeat-x url('../img/photo-grid.jpg');
+    -webkit-box-shadow: inset 0 40px 55px -5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: inset 0 40px 55px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 100px 50px -5px rgba(0, 0, 0, 0.5);
+}
+
+#main-menu {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 8px 8px -10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 8px 8px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 8px -10px rgba(0, 0, 0, 0.5);
+}
+
+.default-menu {
+    position: absolute;
+    z-index: 1;
+    padding: 38px 28px 33px 91px;
+    transition: all ease-in-out 400ms;
+}
+
+.scroll-menu {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 27px 28px 27px 91px;
+    transition: all ease-in-out 400ms;
+}
+
+#main-menu a {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #2e2e2e;
+    letter-spacing: 1.9px;
+}
+
+#main-page-cta {
+    background-color: #fbfafa;
+    padding-top: 215px;
+    padding-bottom: 173px;
+}
+
+.cta-btn {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    background-color: #286782;
+    border: 2px solid #286782;
+    color: #fff;
+    transition: all ease-in-out 250ms;
+    height: 65px;
+    width: 310px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0 transparent;
+    &:hover {
+        background-color: transparent;
+        border: 1px solid #286782;
+        color: #286782;
+    }
+}
+
+#main-content .descr-text {
+    padding: 15% 9%;
+}
+
+/*As for me, better to have same paddings and margins for the same blocks,
+but for pixel perfect layout from mockup better to use commented styles below*/
+
+/*#main-content .row:nth-child(1) .descr-text{*/
+/*    padding: 14% 8% 15% 9.4%;*/
+/*}*/
+
+/*#main-content .row:nth-child(2) .descr-text{*/
+/*    padding: 15% 9%;*/
+/*}*/
+
+/*#main-content .row:nth-child(3) .descr-text{*/
+/*    padding: 16.5% 9% 13.5% 9.5%;*/
+/*}*/
+
+.hotdog-bg1 {
+    background: (center / cover) no-repeat url('../img/beef-hotdog.jpg');
+}
+
+.hotdog-bg2 {
+    background: (center / cover) no-repeat url('../img/vegan-hotdog.jpg');
+}
+
+.hotdog-bg3 {
+    background: (center / cover) no-repeat url('../img/vegit-hotdog.jpg');
+}
+
+.modal-footer button {
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #efefef;
+    a, p {
+        color: #555559;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    a {
+        &::before {
+            content: '|';
+            padding: 0 11px;
+        }
+        &:first-child::before {
+            content: none;
+        }
+    }
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid #555559;
+    padding: 3px 15px;
+}
+
+@media only screen and (max-width: 1024px) {
+    #header-photos {
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    .default-menu, .scroll-menu {
+        padding-left: 40px;
+    }
+    footer a::before {
+        padding: 0 3px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #header-photos {
+        height: 351px;
+    }
+    #main-page-cta {
+        padding-bottom: 133px;
+    }
+    h1 {
+        font-size: 45px;
+        margin-bottom: 53px;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .default-menu, .scroll-menu {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #main-menu a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    #header-photos {
+        height: 175px;
+    }
+    #main-page-cta {
+        padding-top: 175px;
+        padding-bottom: 100px;
+        img {
+            width: 60px;
+        }
+    }
+    h1 {
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+    .cta-btn {
+        height: 50px;
+        width: 200px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    h2 {
+        font-size: 20px;
+        color: #fff;
+        letter-spacing: 0;
+        &:before {
+            background-color: #fff;
+            left: -28px;
+            width: 20px;
+            top: 12px;
+        }
+    }
+    .hotdog-mob-bg1 {
+        background: (center / cover) no-repeat url('../img/beef-hotdog.jpg');
+    }
+    .hotdog-mob-bg2 {
+        background: (center / cover) no-repeat url('../img/vegan-hotdog.jpg');
+    }
+    .hotdog-mob-bg3 {
+        background: (center / cover) no-repeat url('../img/vegit-hotdog.jpg');
+    }
+    .descr-text {
+        background-size: cover;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    p {
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 0;
+    }
+    footer {
+        a, p {
+            font-size: 10px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .default-menu, .scroll-menu {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #main-menu a {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .default-menu, .scroll-menu {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    footer {
+        a, p {
+            font-size: 8px;
+        }
+    }
+}
